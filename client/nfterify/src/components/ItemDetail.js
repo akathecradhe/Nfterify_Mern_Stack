@@ -39,9 +39,9 @@ const  ItemDetail = () =>  {
     let two = baseurl+'/getItemDetails/'+itemId
     let three = baseurl+'/'+role+'/getItems/'+userDetailId
 
-    const requestOne = axios.get(one,{timeout: 250});
-    const requestTwo = axios.get(two,{timeout: 250});
-    const requestThree = axios.get(three,{timeout: 250});
+    const requestOne = axios.get(one,{timeout: 600});
+    const requestTwo = axios.get(two,{timeout: 600});
+    const requestThree = axios.get(three,{timeout: 600});
 
     axios
         .all([requestOne, requestTwo, requestThree])
