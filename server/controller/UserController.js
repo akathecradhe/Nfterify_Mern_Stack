@@ -9,12 +9,19 @@ import {mintItem, findAllItemsMintedByID} from "../database/UserDAO";
 
 const findAllminted = async (req, res) => {
     //url ID
-    const userID = req.params.userDetailId;
 
-    const data = findAllItemsMintedByID(userID);
 
-    console.log(data);
-    res.json(data);
+    try {
+        const userID = req.params.userDetailId;
+        console.log(userID);
+        const data = await findAllItemsMintedByID(userID);
+        console.log(data)
+        res.json(data);
+
+    }catch (e) {
+        console.log(e)
+    }
+
 
 };
 
@@ -31,8 +38,8 @@ const mint = async (req, res) => {
 
    // console.log(data);
 
-    res.json(data);
-    res.sendStatus(201);
+    //res.json(data);
+   res.sendStatus(201);
 };
 
 export  {mint,findAllminted};

@@ -25,5 +25,5 @@
     "mongodb-memory-server": "^8.2.0",
     "jest": "^27.4.7",
     "supertest": "^6.2.2"
-  }
+  },"proxy": "http://localhost:3000"
 }
