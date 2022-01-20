@@ -8,7 +8,7 @@ const  itemsSchema = new Schema({
     brandName: String,
     image: String,
     sizes: Object,
-    //TODO: ADD time made
+    //TODO: ADD time when item was made
 });
 
 const itemModel = mongoose.model("item",itemsSchema);
