@@ -9,7 +9,7 @@ const findAll = (req, res) => {
         }
         else{
             console.log(typeof(result));
-            res.sendStatus(200).json(result);
+            res.json(result).sendStatus(200);
         }
     })
 };
