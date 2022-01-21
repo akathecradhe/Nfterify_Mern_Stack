@@ -8,15 +8,10 @@ import app from "../routes/routes";
 * */
 describe('Api end point testing', () => {
 
-    // it('User should see hello world', async () => {
-    //     const response = await request(app).get('/');
-    //     expect(response.statusCode).toBe(200);
-    //     expect(response.body.message).toBe('Hello World!');
-    // })
-
-    it('User should get back a list of all items /get', async () => {
-        const response = await request(app).get('/getItems');
+    it('User should see hello world', async () => {
+        const response = await request(app).get('/');
         expect(response.statusCode).toBe(200);
+        expect(response.body.message).toBe('Hello World!');
     })
 
 })

@@ -1,17 +1,17 @@
 import itemModel from "../models/itemModel";
+import {findAllItemsCreatedByID} from '../database/Database'
+
 
 // fetches All the Items from the database.
-const findAll = (req, res) => {
+const findAll = async (req, res) => {
+    //url ID
+    const userID = req.params.userDetailId;
 
-    itemModel.find({},(err, result) => {
-        if(err) {
-            console.log(err)
-        }
-        else{
-            console.log(typeof(result));
-            res.json(result).sendStatus(200);
-        }
-    })
+    const data = findAllItemsCreatedByID(userID);
+
+    console.log(data);
+    res.json(data);
+
 };
 
 // Create new item to mint

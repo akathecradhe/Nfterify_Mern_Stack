@@ -13,7 +13,7 @@ app.use(cors());
 
 ///ADMIN
 //get all items
-app.get('/getItems',findAll);
+app.get('/admin/getItems/:userDetailId',findAll);
 
 //create item for minting
 app.post('/createItems',create);

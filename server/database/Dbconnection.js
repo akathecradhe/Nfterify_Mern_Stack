@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv';
 
 dotenv.config();
-//const mongoUri='mongodb+srv://akathecradhe:asd123@app1.jxzan.mongodb.net/NFTerify?retryWrites=true&w=majority';
 const uri = process.env.mongoUri;
 console.log(uri);
 

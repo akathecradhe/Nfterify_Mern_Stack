@@ -1,4 +1,4 @@
-import dbConnect from "./config/dbConnection";
+import dbConnect from "./database/dbConnection";
 import app from './routes/routes';
 import dotenv from 'dotenv';
 
