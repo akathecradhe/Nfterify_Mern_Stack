@@ -1,5 +1,7 @@
 import itemModel from "../models/itemModel";
 import userDetailsModel from "../models/userDetailsModel";
+import itemDetailModel from "../models/itemDetail";
+import crypto from 'crypto';
 
 
 
@@ -48,7 +50,7 @@ export async function createItem(item){
         //add the id of the item ones minted
         // by updating the items minted array;
         await userDetailsModel.findOneAndUpdate({"_id":userdetailsID},
-            { $push: { itemsMinted: [newItem._id] } });
+            { $push: { itemsCreated: [newItem._id] } });
 
 
 }
