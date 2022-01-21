@@ -6,9 +6,9 @@ import crypto from 'crypto';
 
 
 export async function findAllItemsCreatedByID(id){
+
         let data;
         const userInfo = await userDetailsModel.findById(id);
-
         //object with IDs of all the items created by Admin
         const itemsCreated = userInfo.itemsCreated;
 
@@ -19,7 +19,6 @@ export async function findAllItemsCreatedByID(id){
 
         return data;
 }
-
 
 export async function createItem(item){
         ////ID of the current user
