@@ -1,11 +1,11 @@
 import Button from '@material-tailwind/react/Button';
 import Image from '@material-tailwind/react/Image';
-import H2 from '@material-tailwind/react/Heading2';
+import H3 from '@material-tailwind/react/Heading2';
 
 import {FaRegAddressCard} from 'react-icons/fa';
 
 
-
+//use material-tailwind-kit-react
 
 function Content() {
     const ProfilePicture = 'https://s3-alpha-sig.figma.com/img/26dc/f97a/323f0974666539a8ad5cc68f377c2a92?Expires=1643587200&Signature=ATG9~PlpGSnPpSyi44I26GvhYMb2fAzfrvpmkp9AJMb2r3GkqF3XxmESdhVdZU00aodgp39GSeSn72UshVv225WcBsxw2mXyEZWer788B3t~sLLTZmbsOF~hMq6xTfGUY0BjpxjA4ejqFpXRpNzzNKA4aTan4~w3-7Sa4cMyefg35vewVq1LJPpze8eDjXzOhp~Ar18sWGoSjomjT--t6v6lCJKTulXwQku24ZYjSanDT9OGZxTx2q5QtBHUWVjp8en2jwJIHC4cESH7wD-x7tp76uBpKXJ4TjyrIe7Gd5driYwSD~MQ3sb3RISoQm9r2~YFH9g94f099qyqHr48iQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
@@ -53,7 +53,7 @@ function Content() {
                         </div>
 
                         <div className="text-center my-8">
-                            <H2 color="gray">Jenna Stones</H2>
+                            <H3 color="gray">Jenna Stones</H3>
                             <div className="mt-0 mb-2 text-gray-700  flex items-center justify-center gap-2">
                                 <FaRegAddressCard  name="place" size="" />
                                 <span className='text-tahiti text-cyan-400 '>0xd12Cd8A37F074e7eAFae618C986Ff825666198bd </span>
