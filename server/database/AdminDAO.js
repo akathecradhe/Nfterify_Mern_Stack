@@ -7,10 +7,12 @@ import crypto from 'crypto';
 
 export async function findAllItemsCreatedByID(id){
         let data;
-        const userInfo = await userDetailsModel.findById(id);
-
+        let userInfo = await userDetailsModel.findById(id);
+        let itemDetail
+        let itemsCreated = userInfo.itemsCreated;
+        let randomString
         //object with IDs of all the items created by Admin
-        const itemsCreated = userInfo.itemsCreated;
+
 
         //finds all the items in Created
         data = await itemModel.find(
@@ -22,6 +24,10 @@ export async function findAllItemsCreatedByID(id){
 
 
 export async function createItem(item){
+        let itemDetail
+        let mintCode
+        let randomString
+
         ////ID of the current user
         //deleting the userdetailsID from body to allow it to map 1-1 withe item model
         const userdetailsID =item.userDetailsID;
@@ -29,8 +35,7 @@ export async function createItem(item){
 
         //new item is created and added to DB
         const newItem = new itemModel(item);
-        await newItem.save();
-        console.log('this is the item id thats printed out'+ newItem._id) ;
+
         const userDetail = await userDetailsModel.findById(userdetailsID);
 
         //setting the itemdetail scheme
@@ -39,32 +44,28 @@ export async function createItem(item){
            @branndName= user name of the userDetail*/
         const brandName = userDetail.username;
         const sizes= Object.keys(item.sizes);
+
         const quantities = Object.values(item.sizes);
 
         for (let i = 0; i < sizes.length ; i++) {
-                console.log("This is 2nd loop" + parseInt(quantities[i]))
                 for(let x = 0; x < parseInt(quantities[i]);x++){
-                        await setItemDetails(sizes[i],brandName,newItem._id);
+                        //await setItemDetails(sizes[i],brandName,newItem._id);
+
+                        randomString =  crypto.randomBytes(4).toString('hex');
+                        mintCode = brandName + randomString;
+
+                        itemDetail = await new itemDetailModel({size:sizes[i],mintUID:mintCode,LinkedItemID:newItem._id});
+
+                        newItem.allItems.push(itemDetail._id);
+                        await newItem.save()
                 }
         }
-        //add the id of the item ones minted
+        //add the id of the item created
         // by updating the items minted array;
-        await userDetailsModel.findOneAndUpdate({"_id":userdetailsID},
-            { $push: { itemsCreated: [newItem._id] } });
-
-
+        userDetail.itemsCreated.push(newItem._id);
+        await userDetail.save()
 }
 
 
-async function  setItemDetails(size,brand, itemID){
-
-        const randomString =  crypto.randomBytes(4).toString('hex');
-        const mintCode = brand + randomString;
-        console.log("Adding to item: ",itemID)
-        const itemDetail = await new itemDetailModel({size,mintUID:mintCode,LinkedItemID:itemID});
-        console.log(itemDetail);
-        itemDetail.save();
-
-}
 
 

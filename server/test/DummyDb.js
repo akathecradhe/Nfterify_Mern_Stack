@@ -19,7 +19,7 @@ const item2 ={
 }
 
 //Adminstrator
-const userDetails = {
+const adminDetails = {
     _id:mongoose.Types.ObjectId('4edd40c86762e0fb12000003'),
     etherAddress: '0x7def0280c369a8565ace6b4fcbc5dd0dfc9f1553',
     username: "jehucal",
@@ -28,4 +28,14 @@ const userDetails = {
     itemsCreated:[item1._id,item2._id],
 }
 
-export {userDetails,item1,item2};
+//Regular
+const userDetails = {
+    _id:mongoose.Types.ObjectId('5edd40c86762e0fb12000003'),
+    etherAddress: '0x7def0280c369a8565ace6b4fcbc5dd0dfc9f1775',
+    username: "userClive",
+    itemsMinted: [],
+    //ids
+    itemsCreated:[],
+}
+
+export {userDetails,adminDetails,item1,item2};
