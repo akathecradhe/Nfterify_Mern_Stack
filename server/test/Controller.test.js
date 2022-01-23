@@ -1,5 +1,5 @@
 import {clearDatabase,closeDatabase,dbconnect} from '../database/MockDbConnection'
-import {userDetails, item1, item2, adminDetails} from './DummyDb'
+import {userDetails, item1, item2,item1Details ,adminDetails} from './DummyDb'
 import userDetailsModel from "../models/userDetailsModel";
 import {findAllItemsCreatedByID, createItem} from "../database/AdminDAO";
 import {mintItem} from "../database/UserDAO";
@@ -79,28 +79,35 @@ describe('Api end point testing', () => {
 
     })
 
-    // it(' User Mint Item ', async () => {
-    //
-    //     const idUserDetails = mongoose.Types.ObjectId('5edd40c86762e0fb12000003');
-    //     const idAdminDetails = mongoose.Types.ObjectId('4edd40c86762e0fb12000003');
-    //     //content from form
-    //     const Adminpost = {
-    //         name: "hat", description: "none", brandName: "jehucal",
-    //         collectionName: "yellow collection", image: "googleimage99",
-    //         userDetailsID: idAdminDetails,
-    //         sizes: {xsmall: 2, small: 2, medium: 1, large: 2, xlarge: 3,}
-    //     }
-    //
-    //     await createItem(Adminpost);
-    //
-    //     await mintItem(idUserDetails,344343)
-    //
-    //     const userDetail = await userDetailsModel.findById(idAdminDetails);
-    //
-    //
-    //     const itemDetail = await  itemDetailModel.findOne(userDetail.itemsCreated(2) )
-    //
-    // })
+    it(' User Mint Item ', async () => {
+
+        const idUserDetails = mongoose.Types.ObjectId('5edd40c86762e0fb12000003');
+        const idAdminDetails = mongoose.Types.ObjectId('4edd40c86762e0fb12000003');
+        //content from form
+        const Adminpost = {
+            name: "hat", description: "none", brandName: "jehucal",
+            collectionName: "yellow collection", image: "googleimage99",
+            userDetailsID: idAdminDetails,
+            sizes: {xsmall: 2, small: 2, medium: 1, large: 2, xlarge: 3,}
+        }
+
+        await createItem(Adminpost);
+
+        const userDetail1 = await userDetailsModel.findById(idUserDetails);
+        console.log("user before mint "+ userDetail1);
+
+        await mintItem(idUserDetails,'jehucal1999');
+
+
+       const userDetail = await userDetailsModel.findById(idUserDetails);
+       console.log("user after mint "+userDetail);
+
+
+        //Expect user details to have 1 item in the minted
+        expect(userDetail.itemsMinted.length).toBe(1);
+
+
+    })
 
 });
 
@@ -110,7 +117,10 @@ const createUserData = async () => {
     const createUserDetails = await userDetailsModel.create(userDetails);
     const createAdminDetails = await userDetailsModel.create(adminDetails);
     await itemModel.create(item1);
-    await itemModel.create(item2);}
+    await itemDetailModel.create(item1Details)
+    await itemModel.create(item2);
+
+}
 
 
 
