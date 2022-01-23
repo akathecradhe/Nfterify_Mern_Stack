@@ -1,5 +1,6 @@
 import express from 'express';
-import {create, findAll} from '../controller/AdminController.js';
+import {create, findAllcreated} from '../controller/AdminController.js';
+import {findAllminted,mintItem} from '../controller/UserController';
 import cors from 'cors';
 
 
@@ -13,11 +14,17 @@ app.use(cors());
 
 ///ADMIN
 //get all items
-app.get('/admin/getItems/:userDetailId',findAll);
+app.get('/admin/getItems/:userDetailId',findAllcreated);
 
 //create item for minting
 app.post('/createItems',create);
 
+///User
+//get all items
+app.get('/admin/getItems/:userDetailId',findAllminted);
+
+//create item for minting
+app.post('/mintItems',create);
 
 app.get('/', (req, res) => {
     res.json({message:'Hello World!'})
