@@ -1,8 +1,8 @@
 import {clearDatabase,closeDatabase,dbconnect} from '../database/MockDbConnection'
 import {userDetails, item1, item2,item1Details ,adminDetails} from './DummyDb'
 import userDetailsModel from "../models/userDetailsModel";
-import {findAllItemsCreatedByID, createItem} from "../database/AdminDAO";
-import {mintItem} from "../database/UserDAO";
+import {findAllItemsCreatedByID, createItem,} from "../database/AdminDAO";
+import {mintItem,findAllItemsMintedByID} from "../database/UserDAO";
 import itemModel from "../models/itemModel";
 import mongoose from "mongoose";
 import itemDetailModel from "../models/itemDetail";
@@ -112,7 +112,9 @@ describe('Api end point testing', () => {
     it('findAllItems Minted by a user  ', async () => {
 
         const mintedItems = await findAllItemsMintedByID(userDetails._id);
-        expect(mintedItems.length).toBe(0);
+
+
+        expect(mintedItems).toBe("no items Minted");
     });
 
 });

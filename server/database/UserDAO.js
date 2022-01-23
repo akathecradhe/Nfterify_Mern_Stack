@@ -24,6 +24,23 @@ export async function mintItem(user,uid){
     itemDetail.claimed=true;
     await itemDetail.save();
     console.log("item detail After :  " + itemDetail);
+}
+
+export async function findAllItemsMintedByID(id){
+    let data;
+    let userInfo = await userDetailsModel.findById(id);
+    let itemsCreated = userInfo.itemsMinted;
+    //object with IDs of all the items created by Admin
+    //finds all the items in Created
+    try{
+        data = await itemModel.find(
+            {'_id': { $in: itemsMinted}}
+        );
+    }catch (e) {
+        console.log("no items Minted")
+        data = "no items Minted"
+    }
 
 
+    return data;
 }

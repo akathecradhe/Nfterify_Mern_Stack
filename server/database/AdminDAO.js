@@ -12,12 +12,15 @@ export async function findAllItemsCreatedByID(id){
         let itemsCreated = userInfo.itemsCreated;
         let randomString
         //object with IDs of all the items created by Admin
-
-
         //finds all the items in Created
-        data = await itemModel.find(
-            {'_id': { $in: itemsCreated}}
-        );
+        try{
+                data = await itemModel.find(
+                    {'_id': { $in: itemsCreated}}
+                );
+        }catch (e){
+                console.log("no item created")
+                data = "no items created"
+        }
 
         return data;
 }
