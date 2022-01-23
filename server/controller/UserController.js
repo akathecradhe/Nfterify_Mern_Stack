@@ -1,32 +1,42 @@
 
-import itemDetailModel from "../models/itemDetail";
-import userDetailsModel from "../models/userDetailsModel";
-import {createItem} from "../database/UserDAO";
+
+import {mintItem, findAllItemsMintedByID} from "../database/UserDAO";
+import {findAllItemsCreatedByID} from "../database/AdminDAO";
 
 /*
-* list all the items minted by that user
+* Im
 *
 * */
+
+const findAllminted = async (req, res) => {
+    //url ID
+    const userID = req.params.userDetailId;
+
+    const data = findAllItemsMintedByID(userID);
+
+    console.log(data);
+    res.json(data);
+
+};
 
 
 /*
 * Enter a Mint Uid to claim an existing item error if not found
 * */
 
-
-
 const mintItem = async (req, res) => {
 
     const {uniqueID,currentUser}= req.body;
 
-    await createItem(currentUser,uniqueID);
+    const data = await mintItem(currentUser,uniqueID);
 
     console.log(data);
 
     res.json(data);
+    res.sendStatus(201);
 };
 
-export default mintItem;
+export  {mintItem,findAllminted};
 
 
 /*

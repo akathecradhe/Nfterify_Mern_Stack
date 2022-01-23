@@ -3,7 +3,7 @@ import {createItem, findAllItemsCreatedByID} from '../database/AdminDAO'
 
 
 // fetches All the Items from the database.
-const findAll = async (req, res) => {
+const findAllcreated = async (req, res) => {
     //url ID
     const userID = req.params.userDetailId;
 
@@ -28,4 +28,4 @@ const create =async (req, res) => {
 
 };
 
-export {create, findAll}
+export {create, findAllcreated}
