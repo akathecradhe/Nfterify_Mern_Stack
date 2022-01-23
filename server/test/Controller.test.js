@@ -109,6 +109,12 @@ describe('Api end point testing', () => {
 
     })
 
+    it('findAllItems Minted by a user  ', async () => {
+
+        const mintedItems = await findAllItemsMintedByID(userDetails._id);
+        expect(mintedItems.length).toBe(0);
+    });
+
 });
 
 
