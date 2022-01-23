@@ -1,5 +1,5 @@
 import itemModel from "../models/itemModel";
-import {createItem, findAllItemsCreatedByID} from '../database/Database'
+import {createItem, findAllItemsCreatedByID} from '../database/AdminDAO'
 
 
 // fetches All the Items from the database.

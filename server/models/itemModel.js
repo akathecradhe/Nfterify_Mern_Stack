@@ -8,6 +8,7 @@ const  itemsSchema = new Schema({
     brandName: String,
     image: String,
     sizes: Object,
+    allItems: [],
     //TODO: ADD time when item was made
 });
 

@@ -1,1 +1,0 @@
-import userDetailsModel from "../models/userDetailsModel";
