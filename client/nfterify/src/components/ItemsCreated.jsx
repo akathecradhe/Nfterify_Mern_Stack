@@ -1,4 +1,4 @@
-import React, from "react";
+import React from "react";
 import MainSection from "./MainSection";
 import AdminTabCreate from "./AdminTabCreate";
 

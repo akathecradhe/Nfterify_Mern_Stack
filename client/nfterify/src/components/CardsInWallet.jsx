@@ -11,23 +11,15 @@ export default function CardsInWallet() {
     return (
         <Card>
             <CardImage
-                src="shorturl.at/psBK0"
+                src="https://cdn.shopify.com/s/files/1/0270/1351/3269/products/Jehu-cal1529_1445x.jpg"
                 alt="Card Image"
             />
             <CardBody>
-                <H6 color="gray">Card Title</H6>
+                <H6 color="gray">Jacket </H6>
                 <Paragraph color="gray">
-                    Don't be scared of the truth because we need to restart the human
-                    foundation in truth And I love you like Kanye loves Kanye I love
-                    Rick Owens’ bed design but the back is...
+                    by jehucal
                 </Paragraph>
             </CardBody>
-
-            <CardFooter>
-                <Button color="lightBlue" size="lg" ripple="light">
-                    Read More
-                </Button>
-            </CardFooter>
         </Card>
     )
 }
