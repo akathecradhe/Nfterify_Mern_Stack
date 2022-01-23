@@ -1,9 +1,9 @@
 import Button from '@material-tailwind/react/Button';
 import Image from '@material-tailwind/react/Image';
 import H3 from '@material-tailwind/react/Heading2';
+import AdminTabCreate from "./AdminTabCreate"
 
 import {FaRegAddressCard} from 'react-icons/fa';
-
 
 //use material-tailwind-kit-react
 
@@ -76,23 +76,7 @@ function Content() {
                         </div>
 
                         <div className="mb-10 py-2 border-t border-gray-200 text-center">
-                            <div className="flex flex-wrap justify-center">
-                                <div className="w-full lg:w-9/12 px-4 flex flex-col items-center">
-                                    <a
-
-                                        onClick={(e) => e.preventDefault()}
-                                    >
-                                        <Button
-                                            color="lightBlue"
-                                            buttonType="link"
-                                            ripple="dark"
-                                        >
-                                            Create Item
-                                        </Button>
-
-                                    </a>
-                                </div>
-                            </div>
+                            <AdminTabCreate />
                         </div>
                     </div>
                 </div>
