@@ -6,8 +6,16 @@ const item1 ={
     description:"n/a",
     collectionName:'Purple collection',
     brandName:'jehucal',
-    image:'google.com/image32'
+    image:'google.com/image32',
+    allitems: [mongoose.Types.ObjectId('61e61d2285fcebce7226e17e')],
 }
+
+const item1Details={
+    _id:mongoose.Types.ObjectId('61e61d2285fcebce7226e17e'),
+    size: 'xsmall',
+    mintUID: 'jehucal1999',
+    LinkedItemID: mongoose.Types.ObjectId('61e61d2285fcebee7226e17e'),
+ }
 
 const item2 ={
     _id:mongoose.Types.ObjectId('61e646abc8cbb83b8a4f732e'),
@@ -15,7 +23,8 @@ const item2 ={
     description:"n/a",
     collectionName:'Purple collection',
     brandName:'jehucal',
-    image:'google.com/image35'
+    image:'google.com/image35',
+    allitems: [],
 }
 
 //Adminstrator
@@ -38,4 +47,4 @@ const userDetails = {
     itemsCreated:[],
 }
 
-export {userDetails,adminDetails,item1,item2};
+export {userDetails,item1Details,adminDetails,item1,item2};
