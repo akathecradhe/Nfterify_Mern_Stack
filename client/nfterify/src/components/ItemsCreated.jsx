@@ -1,8 +1,9 @@
-import React from "react";
-import AdminTabCreate from "./AdminTabCreate";
+import React, from "react";
 import MainSection from "./MainSection";
+import AdminTabCreate from "./AdminTabCreate";
 
-function Content() {
+
+export default function ItemsCreated() {
 
     return(
         <section className="relative py-16 bg-gray-100">
@@ -20,5 +21,3 @@ function Content() {
     )
 
 }
-
-export default Content;
