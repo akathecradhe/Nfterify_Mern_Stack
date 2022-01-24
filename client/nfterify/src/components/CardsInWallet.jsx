@@ -10,11 +10,11 @@ import Button from "@material-tailwind/react/Button";
 export default function CardsInWallet() {
     return (
         <Card>
-            <CardImage
-                src="https://cdn.shopify.com/s/files/1/0270/1351/3269/products/Jehu-cal1529_1445x.jpg"
-                alt="Card Image"
-            />
             <CardBody>
+                <CardImage
+                    src="https://cdn.shopify.com/s/files/1/0270/1351/3269/products/Jehu-cal1529_1445x.jpg"
+                    alt="Card Image"
+                />
                 <H6 color="gray">Jacket </H6>
                 <Paragraph color="gray">
                     by jehucal

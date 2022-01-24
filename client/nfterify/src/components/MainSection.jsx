@@ -1,5 +1,6 @@
 import Image from "@material-tailwind/react/Image";
 import H3 from "@material-tailwind/react/Heading2";
+import H6 from "@material-tailwind/react/Heading6";
 import {FaRegAddressCard} from "react-icons/fa";
 import React from "react";
 import {useState} from "react";
@@ -73,7 +74,7 @@ export default function MainSection () {
                                 </div>
                             </div>
                             <div className="text-center my-8">
-                                <H3 color="gray">Jenna Stones</H3>
+                                <H6 color="gray">Jenna Stones</H6>
                                 <div className="mt-0 mb-2 text-gray-700  flex items-center justify-center gap-2">
                                     <FaRegAddressCard  name="place" size="" />
                                     <span className='text-tahiti text-cyan-400 '>0xd12Cd8A37F074e7eAFae618C986Ff825666198bd </span>
@@ -104,7 +105,10 @@ export default function MainSection () {
                         <>
                             {view === 'create' && (
                                 // <AddTripButton addTrip={() => setState('add-trip') } />
-                                <p>this is the create button</p>
+                                <button type="button"
+                                        className="text-white bg-gray-400 hover:bg-gray-400 focus:ring-4 focus:ring-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-400 dark:hover:bg-gray-400 dark:focus:ring-gray-400   ">
+                                    Create item
+                                </button>
                             )}
                         </>
 
@@ -114,7 +118,7 @@ export default function MainSection () {
                                 <div className="container mx-auto">
                                     <div className="grid grid-cols-4 gap-6">
                                         <div
-                                            className="flex justify border border-gray-300"
+                                            className="flex justify border border-gray-300 "
                                         >
                                             <CardsInWallet/>
                                         </div>
