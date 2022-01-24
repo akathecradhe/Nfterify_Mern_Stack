@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
 import {useHistory} from 'react-router-dom';
+import QR from "./QR";
+import ReactLogo from './QR';
 import Input from "@material-tailwind/react/Input";
-
 // import useToken from './useToken';
 
 
@@ -26,12 +27,13 @@ const RegisterUser = () => {
             <div className="lg:w-1/2 xl:max-w-screen-sm">
                 <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
                     <div className="cursor-pointer flex items-center">
-                        <div>
 
-                        </div>
+                       {/* <QR />*/}
+
                     </div>
                 </div>
-                <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+                <form className=" border-gray-500 row g-3">
+                <div className=" border mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
                     <h2 className="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
                     xl:text-bold">Register</h2>
 
@@ -39,46 +41,63 @@ const RegisterUser = () => {
 
                         <h1>Sign Up</h1>
                         {errorMessage&& <div className='fail p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800' >{errorMessage}</div>}
+                        <div className="row g-3">
+
+
+                            <div className="col">
+                                <label  className="col-sm-2 col-form-label">Email:</label>
                         <input
                             value={emailValue}
                             onChange={e => setEmailValue(e.target.value)}
-                            placeholder="someone@gmail.com" />
+                            className="form-control"
+                            placeholder="someone@gmail.com"/>
+                            </div>
 
 
+                            <div className="col">
+                                <label className="col-sm-2 col-form-label">Username:</label>
                         <input
                             value={usernameValue}
                             onChange={e => setUsernameValue(e.target.value)}
+                            className="form-control"
                             placeholder="user1" />
+                            </div>
 
+
+                            <div className="col-12">
+                                <label className="col-sm-2 col-form-label">Password:</label>
                         <input
                             type="password"
                             value={passwordValue}
                             onChange={e => setPasswordValue(e.target.value)}
+                            className="form-control"
                             placeholder="password" />
+                            </div>
 
-                        <hr />
-
+                            <div className="col-12">
+                                <label className="col-sm-2 col-form-label">ReType_Password:</label>
                         <div className='py6'>
                             <input className=""
                                    type="password"
-                                   className=''
+                                   className="form-control"
                                    value={confirmedPasswordValue}
                                    onChange={e => setConfirmedPasswordValue(e.target.value)}
                                    placeholder="password" />
-                            <hr/>
+                            </div>
 
                         </div>
 
                         <div className='py6'>
+                            <label className="col-sm-2 col-form-label">StorePass:</label>
                             <input
                                 value={storePassValue}
                                 onChange={e => setStorePass(e.target.value)}
+                                className="form-control"
                                 placeholder="Store Pass" />
-                            <hr/>
 
                         </div>
 
-                        <div>
+                        <div className="col App">
                             <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-full w-36"
                                     disabled={
                                         !emailValue || !passwordValue ||
@@ -87,11 +106,13 @@ const RegisterUser = () => {
                                      >Sign Up</button>
                         </div>
 
-                        <div>
+                        <div className="col-12 App">
                             <button className=' text-blue-500' onClick={() => history.push('/login')}>Already have an account? Log In</button>
+                        </div>
                         </div>
                     </div>
                 </div>
+                    </form>
             </div>
             <div className="hidden lg:flex items-center justify-center bg-indigo-100 flex-1 h-screen">
                 <div className="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">

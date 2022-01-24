@@ -26,7 +26,7 @@ function App() {
             <Route path="/register">
                 <Register/>
             </Route>
-            <Route path="/register">
+            <Route path="/login">
                 <Login/>
             </Route>
             {/* Can also use a named `children` prop */}
