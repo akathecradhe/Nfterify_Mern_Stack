@@ -9,7 +9,6 @@ function Content() {
                     <div className="px-6">
                         <MainSection />
 
-
                     </div>
                 </div>
             </div>
