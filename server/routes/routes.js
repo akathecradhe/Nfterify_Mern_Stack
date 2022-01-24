@@ -3,9 +3,7 @@ import {create, findAllcreated} from '../controller/AdminController.js';
 import {findAllminted,mint} from '../controller/UserController';
 import cors from 'cors';
 
-
 const app= express();
-
 //this allows request body to be take json to be made into an object
 app.use(express.json());
 //all cross object referencing from front end
