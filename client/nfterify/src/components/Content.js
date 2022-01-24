@@ -1,8 +1,5 @@
 import React from "react";
-import AdminTabCreate from "./AdminTabCreate";
 import MainSection from "./MainSection";
-import ItemsCreated from "./ItemsCreated";
-
 function Content() {
 
     return(
@@ -12,10 +9,12 @@ function Content() {
                     <div className="px-6">
                         <MainSection />
 
+
                     </div>
                 </div>
             </div>
         </section>
+
     )
 
 }

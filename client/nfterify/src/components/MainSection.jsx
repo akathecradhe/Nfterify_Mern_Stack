@@ -1,7 +1,6 @@
 import Image from "@material-tailwind/react/Image";
-import H3 from "@material-tailwind/react/Heading2";
 import H6 from "@material-tailwind/react/Heading6";
-import {FaRegAddressCard} from "react-icons/fa";
+import {FaEthereum} from "react-icons/fa";
 import React from "react";
 import {useState} from "react";
 import CardsInWallet from './CardsInWallet';
@@ -26,7 +25,6 @@ export default function MainSection () {
         setView('wallet')
     }
 
-
     return (
                 <>
                             <div className="flex flex-wrap justify-center">
@@ -38,7 +36,7 @@ export default function MainSection () {
                                     </div>
                                 </div>
                                 <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:self-center flex justify-center mt-10 lg:justify-end lg:mt-0">
-                                    <Icon name="settings" size="lg" />Settings
+                                    <button className="btn border-blue-500 " type="button"><Icon name="settings" size="lg" />Settings</button>
                                 </div>
 
 
@@ -75,9 +73,9 @@ export default function MainSection () {
                                 </div>
                             </div>
                             <div className="text-center my-8">
-                                <H6 color="gray">Jenna Stones</H6>
+                                <H6 color="gray">Bruce Wayne</H6>
                                 <div className="mt-0 mb-2 text-gray-700  flex items-center justify-center gap-2">
-                                    <FaRegAddressCard  name="place" size="" />
+                                    <FaEthereum  name="place" size="" />
                                     <span className='text-tahiti text-cyan-400 '>0xd12Cd8A37F074e7eAFae618C986Ff825666198bd </span>
                                 </div>
                             </div>
@@ -106,8 +104,8 @@ export default function MainSection () {
                         <>
                             {view === 'create' && (
                                 // <AddTripButton addTrip={() => setState('add-trip') } />
-                                <button type="button"
-                                        className="text-white bg-gray-400 hover:bg-gray-400 focus:ring-4 focus:ring-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-400 dark:hover:bg-gray-400 dark:focus:ring-gray-400   ">
+                                <button
+                                        className="btn border-blue-500 " type="button">
                                     Create item
                                 </button>
                             )}
@@ -119,12 +117,12 @@ export default function MainSection () {
                                 <div className="container mx-auto">
                                     <div className="grid grid-cols-4 gap-6">
                                         <div
-                                            className="flex justify border border-gray-300 "
+                                            className="flex justify "
                                         >
                                             <CardsInWallet/>
                                         </div>
                                         <div
-                                            className="flex justify border border-gray-300"
+                                            className="flex justify "
                                         >
                                             <CardsInWallet/>
                                         </div>
@@ -140,10 +138,9 @@ export default function MainSection () {
                                         </div>
                                     </div>
                                 </div>
+
                             )}
-
                         </>
-
                     </div>
 
                      </>

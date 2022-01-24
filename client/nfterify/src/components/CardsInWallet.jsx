@@ -1,25 +1,22 @@
 import React from "react";
-import Card from "@material-tailwind/react/Card";
-import CardImage from "@material-tailwind/react/CardImage";
-import CardBody from "@material-tailwind/react/CardBody";
-import CardFooter from "@material-tailwind/react/CardFooter";
-import H6 from "@material-tailwind/react/Heading6";
-import Paragraph from "@material-tailwind/react/Paragraph";
 import Button from "@material-tailwind/react/Button";
+import Card from 'react-bootstrap/Card'
 
 export default function CardsInWallet() {
     return (
-        <Card>
-            <CardBody>
-                <CardImage
-                    src="https://cdn.shopify.com/s/files/1/0270/1351/3269/products/Jehu-cal1529_1445x.jpg"
-                    alt="Card Image"
-                />
-                <H6 color="gray">Jacket </H6>
-                <Paragraph color="gray">
+        <Card  >
+            <Card.Img variant="top" src="https://cdn.shopify.com/s/files/1/0270/1351/3269/products/Jehu-cal1529_1445x.jpg"
+                      style={{ width: '16rem', height: '20rem' }} className="border border-red-500"
+            />
+            <Card.Body >
+                <Card.Title>Jacket</Card.Title>
+                <Card.Text>
                     by jehucal
-                </Paragraph>
-            </CardBody>
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
         </Card>
+
+
     )
 }
