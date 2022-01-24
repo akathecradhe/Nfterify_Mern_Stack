@@ -8,8 +8,6 @@ import mongoose from "mongoose";
 
 
 
-
-
 const createUser =async (req, res) => {
     res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
     // fata form client is requested into the body
