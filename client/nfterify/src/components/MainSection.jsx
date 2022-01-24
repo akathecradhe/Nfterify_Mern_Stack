@@ -5,6 +5,7 @@ import {FaRegAddressCard} from "react-icons/fa";
 import React from "react";
 import {useState} from "react";
 import CardsInWallet from './CardsInWallet';
+import Icon from "@material-tailwind/react/Icon";
 
 /*
 * ui adpeted from : https://demos.creative-tim.com/material-tailwind-kit-react/#/profile?ref=readme-mtkr using materail ui and taillwindcss
@@ -37,7 +38,7 @@ export default function MainSection () {
                                     </div>
                                 </div>
                                 <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:self-center flex justify-center mt-10 lg:justify-end lg:mt-0">
-                                    <p>hello </p>
+                                    <Icon name="settings" size="lg" />Settings
                                 </div>
 
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "@material-tailwind/react/Icon";
 
 function NavBar (){
 
@@ -14,7 +15,7 @@ function NavBar (){
                         <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                             <li className="nav-item active">
                                 <a className="nav-link" href="/">
-                                    <i className="bi bi-box-arrow-left"></i> home
+                                    <Icon name="account_circle" size="lg" />home
                                 </a>
                             </li>
                         </ul>
