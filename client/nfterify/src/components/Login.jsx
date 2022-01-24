@@ -27,7 +27,8 @@ const Login = () => {
                     <div className="cursor-pointer flex items-center">
                     </div>
                 </div>
-                <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+                <form className=" border-gray-500 row g-3">
+                <div className=" border mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
                     <h2 className="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
                     xl:text-bold">Log in</h2>
                     {errorMessage  && <div className='failfail p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800'>{errorMessage}</div>}
@@ -40,21 +41,33 @@ const Login = () => {
                                 value={emailValue}
                                 onChange={e => setEmailValue(e.target.value)}
                                 placeholder="someone@gmail.com" /> */}
+                        <div className="row g-3">
+
+
+                            <div className="col-12">
+                                <label  className="col-sm-2 col-form-label">Email:</label>
                         <input
                             value={emailValue}
                             onChange={e => setEmailValue(e.target.value)}
+                            className="form-control"
                             placeholder="someone@gmail.com" />
+                            </div>
 
-                        <hr/>
-                        <input
+                            <div className="col-12">
+                                <label  className="col-sm-2 col-form-label">Password:</label>
+
+                                <input
                             type="password"
                             value={passwordValue}
                             onChange={e => setPasswordValue(e.target.value)}
+                            className="form-control"
                             placeholder="password" />
-                        <hr />
+                            </div>
+                            <div className="col-12 App">
                         <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-full w-36"
                                 disabled={!emailValue || !passwordValue}
                                 >Log In</button>
+                            </div>
                         <div>
                         </div>
                         <button onClick={OnClickforgetPass}>Forgot your password?</button>
@@ -66,6 +79,8 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
+                    </div>
+                    </form>
             </div>
             <div className="hidden lg:flex items-center justify-center bg-indigo-100 flex-1 h-screen">
                 <div className="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">
