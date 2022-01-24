@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82b89d16-8544-4e52-b835-f47f6642cdb3" name="Changes" comment="Merge: merged login and registration to main UI branch">
-      <change afterPath="$PROJECT_DIR$/client/nfterify/src/components/CreateItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nfterify/src/components/ItemDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nfterify/src/components/ListItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nfterify/src/components/PrivateRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nfterify/src/components/TableBody.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nfterify/src/components/useToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nfterify/src/components/useUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/src/components/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/src/components/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/src/components/ItemCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/src/components/ItemCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/src/components/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/src/components/MainSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/src/components/MainSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/src/components/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/src/components/NavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/src/components/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nfterify/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nfterify/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/AdminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/LoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/LoginController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/database/AdminDAO.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/database/AdminDAO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/routes.js" afterDir="false" />
-    </list>
+    <list default="true" id="82b89d16-8544-4e52-b835-f47f6642cdb3" name="Changes" comment="Merge: merged login and registration to main UI branch" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +133,7 @@
       <workItem from="1643293142024" duration="726000" />
       <workItem from="1643300922414" duration="1028000" />
       <workItem from="1643303220810" duration="64563000" />
-      <workItem from="1643558726127" duration="728000" />
+      <workItem from="1643558726127" duration="2018000" />
     </task>
     <task id="LOCAL-00001" summary="chore: set up back-end folder &amp; install dependencies">
       <created>1642681086289</created>
@@ -482,7 +460,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="feature_ConnectingBackend" />
                       </list>
                     </value>
                   </entry>
