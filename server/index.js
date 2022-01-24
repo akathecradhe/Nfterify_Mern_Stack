@@ -1,6 +1,8 @@
+import dbConnect from "./database/dbConnection";
 import app from './routes/routes';
 import dotenv from 'dotenv';
 
+dbConnect();
 dotenv.config()
 
 const aPORT =  process.env.PORT;
