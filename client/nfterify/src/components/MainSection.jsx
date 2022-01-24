@@ -3,9 +3,8 @@ import H6 from "@material-tailwind/react/Heading6";
 import {FaEthereum} from "react-icons/fa";
 import React from "react";
 import {useState} from "react";
-import CardsInWallet from './CardsInWallet';
 import Icon from "@material-tailwind/react/Icon";
-
+import ItemCard from "./ItemCard";
 /*
 * ui adpeted from : https://demos.creative-tim.com/material-tailwind-kit-react/#/profile?ref=readme-mtkr using materail ui and taillwindcss
 * https://material-tailwind.com/
@@ -116,26 +115,11 @@ export default function MainSection () {
                             {view === 'wallet' && (
                                 <div className="container mx-auto">
                                     <div className="grid grid-cols-4 gap-6">
-                                        <div
-                                            className="flex justify "
-                                        >
-                                            <CardsInWallet/>
+
+                                        <div className="flex justify-center ">
+                                            <ItemCard/>
                                         </div>
-                                        <div
-                                            className="flex justify "
-                                        >
-                                            <CardsInWallet/>
-                                        </div>
-                                        <div
-                                            className="flex justify-center "
-                                        >
-                                            3
-                                        </div>
-                                        <div
-                                            className="flex justify-center "
-                                        >
-                                            4
-                                        </div>
+
                                     </div>
                                 </div>
 
