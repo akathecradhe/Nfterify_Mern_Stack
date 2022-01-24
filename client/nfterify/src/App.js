@@ -1,6 +1,8 @@
 
 import './App.css';
 import AdminHome from "./Pages/AdminHome";
+import Register from './components/Register'
+import Login from './components/Login'
 import NavBar from "./components/NavBar";
 import {
     BrowserRouter,
@@ -21,8 +23,11 @@ function App() {
                 <AdminHome/>
             </Route>
 
-            <Route path="/about">
-
+            <Route path="/register">
+                <Register/>
+            </Route>
+            <Route path="/register">
+                <Login/>
             </Route>
             {/* Can also use a named `children` prop */}
             {/*<Route path="/users/:id" children={<User />} />*/}
