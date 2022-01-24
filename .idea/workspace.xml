@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="82b89d16-8544-4e52-b835-f47f6642cdb3" name="Changes" comment="Merge: merged login and registration to main UI branch" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="tsu" />
+        <option value="c1811006 &lt;tsunguc@cardiff.ac.uk&gt;" />
+        <option value="Clive Tsungu &lt;tsunguc@cardiff.ac.uk&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="23xdqSJmLuTA2Jap2EIcyoqJGcF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/server/node_modules/jest" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\client\nfterify\src\components" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\client\nfterify\src\Pages" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\server" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\server\database" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\client\nfterify\src\components" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\client\nfterify\src\Pages" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\client" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\server" />
+      <recent name="C:\Users\c1811006\OneDrive - Cardiff University\Documents\Year 3\CFLT_CW_C1811006\commercial-frameworks-coursework\server\config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Api end point testing.User should get back a list of all items /get">
+    <configuration name="Api end point testing.User should get back a list of all items /get" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/server/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server/test/routes.test.js" />
+      <test-names>
+        <test-name value="Api end point testing" />
+        <test-name value="User should get back a list of all items /get" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.Api end point testing.User should get back a list of all items /get" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.Api end point testing.User should get back a list of all items /get" />
+        <item itemvalue="npm.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82b89d16-8544-4e52-b835-f47f6642cdb3" name="Changes" comment="" />
+      <created>1642679862953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642679862953</updated>
+      <workItem from="1642679864296" duration="59740000" />
+      <workItem from="1642826548466" duration="2502000" />
+      <workItem from="1642848148628" duration="850000" />
+      <workItem from="1642854010842" duration="3173000" />
+      <workItem from="1642862521484" duration="118520000" />
+      <workItem from="1643104680066" duration="4573000" />
+      <workItem from="1643117247599" duration="76854000" />
+      <workItem from="1643293142024" duration="726000" />
+      <workItem from="1643300922414" duration="1028000" />
+      <workItem from="1643303220810" duration="64563000" />
+      <workItem from="1643558726127" duration="3645000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore: set up back-end folder &amp; install dependencies">
+      <created>1642681086289</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642681086289</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: set up basic express server with tests">
+      <created>1642696640992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642696640992</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: set up DB connection to Mongo Atlas">
+      <created>1642697229421</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642697229421</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: create Model schema for items">
+      <created>1642702693152</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642702693153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: create Model schema for Users">
+      <created>1642702872554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642702872554</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: create basic routes to GetALL &amp; Create">
+      <created>1642708471673</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642708471673</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test: get route test added">
+      <created>1642710000273</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642710000273</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: commented out failing tests">
+      <created>1642711070281</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642711070281</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: READ operation findAllitemscreatedbyId">
+      <created>1642747485207</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642747485207</updated>
+    </task>
+    <task id="LOCAL-00010" summary="test: unit test for READ operation findAllitemscreatedbyId">
+      <created>1642747584410</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642747584410</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: Create operation create A new Item">
+      <created>1642755134129</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642755134129</updated>
+    </task>
+    <task id="LOCAL-00012" summary="test: unit test to Create operation create A new Item">
+      <created>1642763808226</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642763808226</updated>
+    </task>
+    <task id="LOCAL-00013" summary="init react">
+      <created>1642772356790</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1642772356790</updated>
+    </task>
+    <task id="LOCAL-00014" summary="init react">
+      <created>1642772578646</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1642772578646</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chore: init controller file">
+      <created>1642772716941</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642772716941</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chore: init controller file">
+      <created>1642773949569</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642773949569</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chore: create test file">
+      <created>1642774082560</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642774082560</updated>
+    </task>
+    <task id="LOCAL-00018" summary="docs: tasks need to be done for branch">
+      <created>1642775431269</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1642775431269</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactor:">
+      <created>1642775776932</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1642775776932</updated>
+    </task>
+    <task id="LOCAL-00020" summary="chore: install react dependencies">
+      <created>1642781285392</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1642781285392</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feature: user interface profile page for admin">
+      <created>1642884769162</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1642884769163</updated>
+    </task>
+    <task id="LOCAL-00022" summary="chore: added package.josn file to git">
+      <created>1642886510602</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1642886510602</updated>
+    </task>
+    <task id="LOCAL-00023" summary="chore: added package.josn file to git">
+      <created>1642886588197</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1642886588197</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Doc: added notes">
+      <created>1642895309983</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1642895309983</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Tests: refactored code in adminDAO and tests">
+      <created>1642939902808</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1642939902808</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feature: mint item DAO functionallity for the user">
+      <created>1642939966378</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1642939966378</updated>
+    </task>
+    <task id="LOCAL-00027" summary="test: TDD test describe the intended behaviour of mintItem">
+      <created>1642944980366</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1642944980366</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat: &quot;implement mintItem function in userDAO&quot;">
+      <created>1642945059609</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1642945059609</updated>
+    </task>
+    <task id="LOCAL-00029" summary="test: &quot;TDD approach&quot; outline of how findAllItemsMintedByID should work">
+      <created>1642946667318</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1642946667318</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feature: implement findAllItemsMintedByID in userDAO">
+      <created>1642952128655</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1642952128655</updated>
+    </task>
+    <task id="LOCAL-00031" summary="docs: created tasks">
+      <created>1642952620702</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1642952620702</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feats: added routes">
+      <created>1642955123902</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1642955123902</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: LoginController.js init">
+      <created>1642965277261</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1642965277262</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Styling: added tab styling">
+      <created>1642971091072</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1642971091073</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feature : create user in Registercontroller">
+      <created>1642988849800</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1642988849800</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feature : login user in LoginController">
+      <created>1642995149599</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1642995149599</updated>
+    </task>
+    <task id="LOCAL-00037" summary="chore : deleted unused file testing routes">
+      <created>1642996203664</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1642996203664</updated>
+    </task>
+    <task id="LOCAL-00038" summary="chore : testing routes">
+      <created>1642996507527</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1642996507527</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Merge: Merge backend into dev branch v release 1.0">
+      <created>1642997546424</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1642997546424</updated>
+    </task>
+    <task id="LOCAL-00040" summary="init dev branch v1.0 release">
+      <created>1642997643809</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1642997643809</updated>
+    </task>
+    <task id="LOCAL-00041" summary="style: css profile complete">
+      <created>1643001858651</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1643001858651</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Merged: feature_adminProflipage">
+      <created>1643001968608</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1643001968608</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Styling: Created css for login and registration">
+      <created>1643004538486</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1643004538486</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Merge: merged login and registration to main UI branch">
+      <created>1643004673024</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1643004673024</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature_ConnectingBackend" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature_clientSideReact" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: added package.josn file to git" />
+    <MESSAGE value="Doc: added notes" />
+    <MESSAGE value="Tests: refactored code in adminDAO and tests" />
+    <MESSAGE value="feature: mint item DAO functionallity for the user" />
+    <MESSAGE value="test: TDD test describe the intended behaviour of mintItem" />
+    <MESSAGE value="feat: &quot;implement mintItem function&quot;" />
+    <MESSAGE value="feat: &quot;implement mintItem function in userDAO&quot;" />
+    <MESSAGE value="test: &quot;TDD approach&quot; outline of how findAllItemsMintedByID should work" />
+    <MESSAGE value="feature: implement findAllItemsMintedByID in userDAO" />
+    <MESSAGE value="docs: created tasks" />
+    <MESSAGE value="feats: created tasks" />
+    <MESSAGE value="feats: added routes" />
+    <MESSAGE value="feat: LoginController.js init" />
+    <MESSAGE value="Styling: added tab styling" />
+    <MESSAGE value="feature : create user in Registercontroller" />
+    <MESSAGE value="feature : login user in LoginController" />
+    <MESSAGE value="chore : deleted unused file testing routes" />
+    <MESSAGE value="chore : testing routes" />
+    <MESSAGE value="Merge: Merge backend into dev branch" />
+    <MESSAGE value="Merge: Merge backend into dev branch v release 1.0" />
+    <MESSAGE value="init dev branch v1.0 release" />
+    <MESSAGE value="style: css profile complete" />
+    <MESSAGE value="Merged: feature_adminProflipage" />
+    <MESSAGE value="Styling: Created css for login and registration" />
+    <MESSAGE value="Merge: merged login and registration to main UI branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge: merged login and registration to main UI branch" />
+  </component>
+</project>
