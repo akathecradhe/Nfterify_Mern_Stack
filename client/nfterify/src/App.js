@@ -1,6 +1,8 @@
 import CreateItem from './components/CreateItem'
 import './App.css';
 import Content from './components/Content'
+import UserContent from './components/userComponets/UserContent'
+import MintItem from './components/userComponets/MintItem'
 import ItemDetail from './components/ItemDetail'
 import ListItems from './components/ListItems'
 import AdminHome from './Pages/AdminHome'
@@ -28,6 +30,7 @@ function App() {
                 <Login/>
             </Route>
 
+            //Admin
             <PrivateRoute exact path='/ListItems'>
                 <ListItems/></PrivateRoute>
 
@@ -43,6 +46,13 @@ function App() {
                 <ItemDetail/>
             </PrivateRoute>
 
+            //User
+            <PrivateRoute exact path="/user">
+                <UserContent/>
+            </PrivateRoute>
+            <PrivateRoute exact path="/mint">
+                <MintItem/>
+            </PrivateRoute>
 
 
 

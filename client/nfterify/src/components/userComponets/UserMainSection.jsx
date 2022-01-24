@@ -5,30 +5,41 @@ import {Link,useHistory} from 'react-router-dom';
 import React from "react";
 import axios from 'axios';
 import {useState,useEffect} from "react";
-import { useUser } from './useUser';
+import { useUser } from '../useUser';
 import Icon from "@material-tailwind/react/Icon";
-import ItemCard from "./ItemCard";
+import ItemCard from "../ItemCard";
 /*
 * ui adpeted from : https://demos.creative-tim.com/material-tailwind-kit-react/#/profile?ref=readme-mtkr using materail ui and taillwindcss
 * https://material-tailwind.com/
 *
 * */
-export default function MainSection () {
+export default function UserMainSection () {
     const history= useHistory();
     const user = useUser();
+    const [itemList,setItemList]=useState('');
     const ProfilePicture = 'https://s3-alpha-sig.figma.com/img/26dc/f97a/323f0974666539a8ad5cc68f377c2a92?Expires=1643587200&Signature=ATG9~PlpGSnPpSyi44I26GvhYMb2fAzfrvpmkp9AJMb2r3GkqF3XxmESdhVdZU00aodgp39GSeSn72UshVv225WcBsxw2mXyEZWer788B3t~sLLTZmbsOF~hMq6xTfGUY0BjpxjA4ejqFpXRpNzzNKA4aTan4~w3-7Sa4cMyefg35vewVq1LJPpze8eDjXzOhp~Ar18sWGoSjomjT--t6v6lCJKTulXwQku24ZYjSanDT9OGZxTx2q5QtBHUWVjp8en2jwJIHC4cESH7wD-x7tp76uBpKXJ4TjyrIe7Gd5driYwSD~MQ3sb3RISoQm9r2~YFH9g94f099qyqHr48iQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-    const [view, setView] = useState('create');
-    const setToCreate = () => {
-      setView('create')
+    const [view, setView] = useState('mint');
+    const setToMint = () => {
+      setView('mint')
     }
     const setToWallet = () => {
         setView('wallet')
     }
-    let itemData = Array.from(GetItems(user.userRole,user.userInfoID));
+    //let itemData = Array.from(GetItems(user.userRole,user.userInfoID));
 
-    console.log("This is the item data "+ JSON.stringify(itemData) );
+    axios.get('http://localhost:3001'+'/'+user.userRole+'/getItems/'+user.userInfoID,{timeout: 1000})
+        .then( (response) =>
+        {
+            setItemList(response.data)
 
+            console.log(response.data);
+        }).catch(errors => {
+        // react on errors.
+        console.error(errors);
+    });
 
+    console.log("This is the item data "+ JSON.stringify(itemList) );
+    let itemData= Array.from(itemList)
     return (
                 <>
                             <div className="flex flex-wrap justify-center">
@@ -87,8 +98,8 @@ export default function MainSection () {
                                 <div className="mb-2 text-gray-700 flex items-center justify-center gap-2">
                                     <button className="font-medium text-center text-gray-500 rounded-t-lg border-b-2
                                                 border-transparent hover:text-blue-700 hover:border-blue-700 " aria-current="page"
-                                            onClick={() =>setToCreate()}  >
-                                          Create
+                                            onClick={() =>setToMint()}  >
+                                          Mint
                                     </button>
                                 </div>
                                 <div className="mb-3 text-gray-700 text-center  gap-6">
@@ -106,12 +117,14 @@ export default function MainSection () {
 
                         {/*//show create item*/}
                         <>
-                            {view === 'create' && (
+                            {view === 'mint' && (
                                 // <AddTripButton addTrip={() => setState('add-trip') } />
+                                <>
                                 <button
-                                        className="btn border-blue-500 " type="button" onClick={()=>history.push('/createItem')}>
-                                    Create item
+                                        className="btn border-blue-500 " type="button" onClick={()=>history.push('/mint')}>
+                                    Mint item
                                 </button>
+                                </>
                             )}
                         </>
 

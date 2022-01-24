@@ -36,11 +36,12 @@ export async function findAllItemsMintedByID(id){
         data = await itemModel.find(
             {'_id': { $in: itemsMinted}}
         );
+
+
     }catch (e) {
         console.log("no items Minted")
         data = "no items Minted"
     }
-
-
+    console.log("heres the " +data)
     return data;
 }

@@ -11,9 +11,10 @@ import Modal from "@material-tailwind/react/Modal";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 import ModalBody from "@material-tailwind/react/ModalBody";
 
-const  ItemDetail = () =>  {
+const  UserItemDetail = () =>  {
     const user = useUser();
     const [item,SetItem]=useState('');
+    const [MintedItem,SetMintedItem]=useState('');
     const [xsmall,SetXsmall]=useState([]);
     const [small,SetSmall]=useState([]);
     const [medium,SetMedium]=useState("");
@@ -39,9 +40,9 @@ const  ItemDetail = () =>  {
     let two = baseurl+'/getItemDetails/'+itemId
     let three = baseurl+'/'+role+'/getItems/'+userDetailId
 
-    const requestOne = axios.get(one,{timeout: 600});
-    const requestTwo = axios.get(two,{timeout: 600});
-    const requestThree = axios.get(three,{timeout: 600});
+    const requestOne = axios.get(one,{timeout: 250});
+    const requestTwo = axios.get(two,{timeout: 250});
+    const requestThree = axios.get(three,{timeout: 250});
 
     axios
         .all([requestOne, requestTwo, requestThree])
@@ -56,15 +57,22 @@ const  ItemDetail = () =>  {
                         //     "this is response three "+JSON.stringify(responesThree));
 
                 data ={responseOne, itemdetails, allItems}
-                console.log("this is one"+ JSON.stringify(responseOne));
+                console.log("this is one"+ JSON.stringify(responseOne.itemsMinted));
                 console.log("this is two"+JSON.stringify(itemdetails))
                 console.log("this is three"+JSON.stringify(allItems))
 
                 //Find the item by ID
                 let item = allItems.find(i => i._id === itemId);
-                SetItem(item);
+
+
+
+                SetItem(responseOne.);
                 // console.log("ttype check "+JSON.stringify(itemdetails.data))
                 // let size= itemdetails.data.filter(i => i.size === "xsmall" )
+
+                function getMintedItems(use)
+
+
 
                 function getSizeDetails(dataSet,size) {
                    let x= Array.from(dataSet)
@@ -290,7 +298,7 @@ const  ItemDetail = () =>  {
 }
 
 
-export default ItemDetail;
+export default UserItemDetail;
 
 // function SizeModel(sizeObject) {
 //
