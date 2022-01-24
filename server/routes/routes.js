@@ -15,13 +15,12 @@ app.use(cors());
 ///ADMIN
 //get all items
 app.get('/admin/getItems/:userDetailId',findAllcreated);
-
 //create item for minting
 app.post('/createItems',create);
 
 ///User
 //get all items
-app.get('/admin/getItems/:userDetailId',findAllminted);
+app.get('/user/getItems/:userDetailId',findAllminted);
 
 //create item for minting
 app.post('/mintItems',create);
