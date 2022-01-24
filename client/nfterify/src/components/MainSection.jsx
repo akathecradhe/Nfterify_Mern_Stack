@@ -1,8 +1,11 @@
 import Image from "@material-tailwind/react/Image";
 import H6 from "@material-tailwind/react/Heading6";
 import {FaEthereum} from "react-icons/fa";
+import {Link,useHistory} from 'react-router-dom';
 import React from "react";
-import {useState} from "react";
+import axios from 'axios';
+import {useState,useEffect} from "react";
+import { useUser } from './useUser';
 import Icon from "@material-tailwind/react/Icon";
 import ItemCard from "./ItemCard";
 /*
@@ -11,18 +14,19 @@ import ItemCard from "./ItemCard";
 *
 * */
 export default function MainSection () {
-
+    const history= useHistory();
+    const user = useUser();
     const ProfilePicture = 'https://s3-alpha-sig.figma.com/img/26dc/f97a/323f0974666539a8ad5cc68f377c2a92?Expires=1643587200&Signature=ATG9~PlpGSnPpSyi44I26GvhYMb2fAzfrvpmkp9AJMb2r3GkqF3XxmESdhVdZU00aodgp39GSeSn72UshVv225WcBsxw2mXyEZWer788B3t~sLLTZmbsOF~hMq6xTfGUY0BjpxjA4ejqFpXRpNzzNKA4aTan4~w3-7Sa4cMyefg35vewVq1LJPpze8eDjXzOhp~Ar18sWGoSjomjT--t6v6lCJKTulXwQku24ZYjSanDT9OGZxTx2q5QtBHUWVjp8en2jwJIHC4cESH7wD-x7tp76uBpKXJ4TjyrIe7Gd5driYwSD~MQ3sb3RISoQm9r2~YFH9g94f099qyqHr48iQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-
     const [view, setView] = useState('create');
-
     const setToCreate = () => {
       setView('create')
     }
-
     const setToWallet = () => {
         setView('wallet')
     }
+    let itemData = Array.from(GetItems(user.userRole,user.userInfoID));
+
+    console.log("This is the item data "+ JSON.stringify(itemData) );
 
     return (
                 <>
@@ -72,10 +76,10 @@ export default function MainSection () {
                                 </div>
                             </div>
                             <div className="text-center my-8">
-                                <H6 color="gray">Bruce Wayne</H6>
+                                <H6 color="gray">@{user.username}</H6>
                                 <div className="mt-0 mb-2 text-gray-700  flex items-center justify-center gap-2">
                                     <FaEthereum  name="place" size="" />
-                                    <span className='text-tahiti text-cyan-400 '>0xd12Cd8A37F074e7eAFae618C986Ff825666198bd </span>
+                                    <span className='text-tahiti truncate ... text-cyan-400 '>0xd12Cd8A37F074e7eAFae618C986Ff825666198bd </span>
                                 </div>
                             </div>
                             <div className="flex justify-center gap-x-40 ">
@@ -104,7 +108,7 @@ export default function MainSection () {
                             {view === 'create' && (
                                 // <AddTripButton addTrip={() => setState('add-trip') } />
                                 <button
-                                        className="btn border-blue-500 " type="button">
+                                        className="btn border-blue-500 " type="button" onClick={()=>history.push('/createItem')}>
                                     Create item
                                 </button>
                             )}
@@ -113,14 +117,18 @@ export default function MainSection () {
                         {/*//show wallet*/}
                         <>
                             {view === 'wallet' && (
-                                <div className="container mx-auto">
-                                    <div className="grid grid-cols-4 gap-6">
+                                <div className="container mx- justify-center">
+                                            <div className="px-3 py-10 gap-y-10 sm:grid
+                                             mdsm2:grid-cols mdsm1:grid-cols-3
 
-                                        <div className="flex justify-center ">
-                                            <ItemCard/>
-                                        </div>
+                                             md:grid-cols-3 xl:grid-cols-3">
+                                                {
+                                                    itemData.map((item) =>  (
+                                                            <ItemCard key={item._id} item ={item}  />
+                                                    ))
+                                                }
+                                            </div>
 
-                                    </div>
                                 </div>
 
                             )}
@@ -131,3 +139,28 @@ export default function MainSection () {
 
 );
 }
+
+
+export function GetItems(role,userDetailId){
+    const [itemList, setItemList] = useState([]);
+    const baseurl= 'http://localhost:3001';
+    console.log('usrl ' + baseurl+'/'+role+'/getItems/'+userDetailId );
+
+    useEffect(() => {
+            async function makeAPICall(){
+
+                await axios.get('http://localhost:3001'+'/'+role+'/getItems/'+userDetailId)
+                    .then( (response) =>
+                    {
+                        setItemList(response.data);
+                        console.log(response.data);
+                    });
+            }
+            makeAPICall()
+        }
+        , [])
+
+    console.log(itemList);
+    return itemList;
+
+};

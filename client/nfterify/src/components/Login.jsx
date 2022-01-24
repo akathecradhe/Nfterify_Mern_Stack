@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
 import {useHistory} from 'react-router-dom';
-// import axios from 'axios';
-// import useToken from './useToken';
-// import useUser from './useUser'
+import axios from 'axios';
+import useToken from './useToken';
+
 
 const Login = () => {
     //const [emailValue, setEmailValue] = useState('');
@@ -12,8 +12,36 @@ const Login = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const baseurl= 'http://localhost:3001';
     const history= useHistory();
-    // const [token,setToken] = useToken();
+    const [token,setToken] = useToken();
 
+
+    const OnClickLogin = async () => {
+        // try {
+        //get response to server
+        let proceed;
+        let itoken;
+        let a;
+        const response = await axios.post(baseurl+'/api/login', {
+            email:emailValue,
+            password: passwordValue,
+        })
+            .then( response => {itoken = response.data;
+                setToken(itoken);
+                history.push('/');
+            })
+            .catch(error => {
+                console.log(error);
+                setErrorMessage(error)
+                console.error('There was an error!', error);
+            });
+
+        // if(proceed){
+        //     setToken(itoken);
+        //     history.push('/');
+        // }
+
+
+    }
 
     const OnClickforgetPass = async () => {
         alert("pass word not implemented yet")
@@ -25,6 +53,8 @@ const Login = () => {
             <div className="lg:w-1/2 xl:max-w-screen-sm">
                 <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
                     <div className="cursor-pointer flex items-center">
+
+                        <div className="text-2xl text-indigo-800 tracking-wide ml-2 font-semibold">blockify</div>
                     </div>
                 </div>
                 <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
@@ -54,7 +84,7 @@ const Login = () => {
                         <hr />
                         <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-full w-36"
                                 disabled={!emailValue || !passwordValue}
-                                >Log In</button>
+                                onClick={OnClickLogin}>Log In</button>
                         <div>
                         </div>
                         <button onClick={OnClickforgetPass}>Forgot your password?</button>
@@ -62,7 +92,7 @@ const Login = () => {
 
                         <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
                             Don't have an account ?
-                            <a className="cursor-pointer text-indigo-600 hover:text-indigo-800" onClick={()=>history.push('/register')}>Sign up</a>
+                            <button className="cursor-pointer text-indigo-600 hover:text-indigo-800" onClick={()=>history.push('/register')}>Sign up</button>
                         </div>
                     </div>
                 </div>
