@@ -1,9 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import {useHistory} from 'react-router-dom';
-import Input from "@material-tailwind/react/Input";
-
-// import useToken from './useToken';
+import useToken from './useToken';
+import axios from 'axios';
 
 
 
@@ -15,10 +14,33 @@ const RegisterUser = () => {
     const [confirmedPasswordValue, setConfirmedPasswordValue] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [storePassValue,setStorePass] = useState('');
-    // const [token,setToken] = useToken();
+    const [token,setToken] = useToken();
     const baseurl= 'http://localhost:3001';
     const history= useHistory();
     let  user ;
+
+    const OnClickSignup = async () => {
+        // try {
+        let itoken;
+
+        const response = await axios.post(baseurl+'/api/register',
+            { email:emailValue,
+                username:usernameValue,
+                password:passwordValue,
+                storePass:storePassValue,
+            }).then( response => {itoken = response.data;
+            setToken(itoken);
+            history.push('/');
+        })
+            .catch(error => {
+                console.log(error);
+                setErrorMessage(error)
+                console.error('There was an error!', error);
+            });
+
+    }
+
+
 
     return (
 
@@ -83,7 +105,7 @@ const RegisterUser = () => {
                                     disabled={
                                         !emailValue || !passwordValue ||
                                         passwordValue !== confirmedPasswordValue
-                                    }
+                                    } onClick={OnClickSignup}
                                      >Sign Up</button>
                         </div>
 

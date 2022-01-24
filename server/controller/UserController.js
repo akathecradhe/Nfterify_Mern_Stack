@@ -29,7 +29,7 @@ const mint = async (req, res) => {
 
     const data = await mintItem(currentUser,uniqueID);
 
-    console.log(data);
+   // console.log(data);
 
     res.json(data);
     res.sendStatus(201);

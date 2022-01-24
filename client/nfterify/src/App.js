@@ -1,15 +1,16 @@
-
+import CreateItem from './components/CreateItem'
 import './App.css';
-import AdminHome from "./Pages/AdminHome";
+import Content from './components/Content'
+import ItemDetail from './components/ItemDetail'
+import ListItems from './components/ListItems'
+import AdminHome from './Pages/AdminHome'
 import Register from './components/Register'
 import Login from './components/Login'
+import PrivateRoute from './components/PrivateRoute'
 import NavBar from "./components/NavBar";
 import {
-    BrowserRouter,
     Switch,
     Route,
-    Link,
-    useRouteMatch
 } from "react-router-dom";
 
 
@@ -19,16 +20,32 @@ function App() {
         <NavBar />
 
         <Switch>
-            <Route exact path="/">
-                <AdminHome/>
-            </Route>
 
             <Route path="/register">
                 <Register/>
             </Route>
-            <Route path="/register">
+            <Route path="/login">
                 <Login/>
             </Route>
+
+            <PrivateRoute exact path='/ListItems'>
+                <ListItems/></PrivateRoute>
+
+            <PrivateRoute exact path="/createItem">
+                <CreateItem/>
+            </PrivateRoute>
+
+            <PrivateRoute exact path="/">
+                <Content/>
+            </PrivateRoute>
+
+            <PrivateRoute exact path="/item/:itemId">
+                <ItemDetail/>
+            </PrivateRoute>
+
+
+
+
             {/* Can also use a named `children` prop */}
             {/*<Route path="/users/:id" children={<User />} />*/}
         </Switch>

@@ -14,16 +14,17 @@ const loginUser  =async (req, res) => {
 
     if(!user){
         //error code
-        console.log("error cannot register an existing user")
+        console.log("error with password" )
         res.status(409).send("Something wrong with  password or username please try again")
     }else{
-
+        console.log("user item:    "+  user)
         const userPassword= user.password;
         const username= user.username;
         const id = user._id;
         const userRole= user.role;
-        const _userinfoId = user.userInfoID;
+        const userInfoID = user.userDetailId;
         const isVerified = user.isVerified;
+
 
         // unhash then check if passwords are the same
 
@@ -31,7 +32,7 @@ const loginUser  =async (req, res) => {
 
         if(passwordIsSame){
             jwt.sign({
-                    id,email,username,userRole,_userinfoId,isVerified
+                    id,email,username,userRole,userInfoID,isVerified
                 },process.env.JWT_SECRET,
                 {
                     expiresIn:'3d',
