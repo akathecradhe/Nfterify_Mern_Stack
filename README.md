@@ -5,7 +5,7 @@ Introduction (MVP)
 
 **Tell us about what you were aiming to build**? 
 A Mern Stack web application that can be used by a brand to craete digital 'clothing items' where each piece of clothing has a set number of items.
-Each item is assigned with a mintUID that is unique. This mintUID can then be used by customers of role 'user' to claim the 'NFT' into their wallet.
+Each item is assigned with a mintUID that is unique. This mintUID can then be used by customers of role 'user' to claim the 'NFT' into their wallet. 
 
 
 **What were the limitations to the project**? 
@@ -42,9 +42,9 @@ Architecture - https://structurizr.com/share/71798
 
 3.) n another navigate to ./client/nefterify --> npm install and then npm start
 
-4.) login as a brand jehucalbrand@gmail.com:jehucal
+4.) login as a brand jehucal@gmail.com:a
 
-5.) Create an item , take not of a particular mintUID
+5.) Create an item. Refresh page for it to appear in wallet and take note of a particular mintUID
 
 6.) login as a user appuser@gmail.com:appuser
 
