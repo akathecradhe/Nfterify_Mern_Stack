@@ -1,7 +1,7 @@
 import Image from "@material-tailwind/react/Image";
 import H6 from "@material-tailwind/react/Heading6";
 import {FaEthereum} from "react-icons/fa";
-import {Link,useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import React from "react";
 import axios from 'axios';
 import {useState,useEffect} from "react";
@@ -16,7 +16,7 @@ import ItemCard from "./ItemCard";
 export default function MainSection () {
     const history= useHistory();
     const user = useUser();
-    const ProfilePicture = 'https://s3-alpha-sig.figma.com/img/26dc/f97a/323f0974666539a8ad5cc68f377c2a92?Expires=1643587200&Signature=ATG9~PlpGSnPpSyi44I26GvhYMb2fAzfrvpmkp9AJMb2r3GkqF3XxmESdhVdZU00aodgp39GSeSn72UshVv225WcBsxw2mXyEZWer788B3t~sLLTZmbsOF~hMq6xTfGUY0BjpxjA4ejqFpXRpNzzNKA4aTan4~w3-7Sa4cMyefg35vewVq1LJPpze8eDjXzOhp~Ar18sWGoSjomjT--t6v6lCJKTulXwQku24ZYjSanDT9OGZxTx2q5QtBHUWVjp8en2jwJIHC4cESH7wD-x7tp76uBpKXJ4TjyrIe7Gd5driYwSD~MQ3sb3RISoQm9r2~YFH9g94f099qyqHr48iQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    const ProfilePicture = 'https://pbs.twimg.com/profile_images/1485898536881373191/rqv2ChqS_400x400.jpg'
     const [view, setView] = useState('create');
     const setToCreate = () => {
       setView('create')
