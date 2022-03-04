@@ -6,13 +6,13 @@ A mobile first web application providing seamless digital proof of authenticity 
 
 Architecture - https://structurizr.com/share/71798
 
-How to run -
+**How to run** -
 
-Git clone- https://git.cardiff.ac.uk/c1811006/commercial-frameworks-coursework.git
+1.) Git clone Repository and checkout to branch feature_ConnectingBackend 
 
-navigate to ./server --> npm install and then npm start
+2.) navigate to ./server --> npm install and then npm start
 
-navigate to ./client/nefterify --> npm install and then start
+3.) navigate to ./client/nefterify --> npm install and then start
 
 create a new account, when doing so you can input the creator pass 'jehucal20' to make a brand account otherwise leave empty
 
