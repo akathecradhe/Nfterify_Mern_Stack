@@ -40,9 +40,18 @@ Architecture - https://structurizr.com/share/71798
 
 2.) navigate to ./server --> npm install and then npm start
 
-3.) navigate to ./client/nefterify --> npm install and then start
+3.) in another terminal navigate to ./client/nefterify --> npm install and then npm start
 
-create a new account, when doing so you can input the creator pass 'jehucal20' to make a brand account otherwise leave empty for regular user
+4.) login  as a brand jehucalbrand@gmail.com:jehucal
+
+5.) Create an item , take not of a particular mintUID
+
+6.) login as a user appuser@gmail.com:appuser
+
+7.) enter in the mintUID corrosponding to an item and once 'minted' you can refresh and item should appear in wallet.
+
+
+You can also create a new account but its not recommended for testing purposes, when doing so you can input the creator pass 'jehucal20' to make a brand account otherwise leave empty for regular user
 
 
 
