@@ -5,14 +5,14 @@ Introduction (MVP)
 
 **Tell us about what you were aiming to build**? 
 A Mern Stack web application that can be used by a brand to craete digital 'clothing items' where each piece of clothing has a set number of items.
-Each item is assigned with a mintUID that is unique. This mintUID can then be used by customers of role 'user' to claim the 'NFT' into their wallet. 
+Each item is assigned with a mintUID that is unique. This mintUID can then be used by customers of role 'user' to claim the 'NFT' into their wallet. At current the appplicaton hasn
 
 
 **What were the limitations to the project**? 
 I only had a few weeks to complete this project, so time was limted. Another factor was my lack of familiarity with react; this was my first full-stack react-based web application. Because of these two constraints, I ended up 'bedroom hacking' a few features and not adhering to recommended practises.I was following the Gitflow Workflow as far as best practise was concerned.Because the MVP hasn't been fully completed,the main branch is empty and the Dev branch only has a few completely functional features. feature_ConnectingBackend  is the most up to date branch and links the Clientside to the backend.
 
 **How would you have improved on the code?** *
-The authentication and auhtorisation of the web application was 'bedroom hacked'. I could have implemented a Session+ state manegemnt system to do this. I am currently looking and Migrating the project to the Next.js framework which uses next-auth which offers easy,flexible and secure authentication + rolebased access control. Next-auth also offers Social login, i will be looking to comlpetley replace the regstation and login page with just social logins. Social logins has many benifits security wise and also protects my application from being spammed with lots of random users via registration page.
+The application's authentication and authorization were 'bedroom hacked.' To do this, I could have used a Session+ state management system. I'm looking into migrating the project to the Next.js framework, which leverages next-auth to provide easy, flexible, and secure authentication as well as role-based access management. Next-auth also has a social login option, which I want to use to completely replace the registration and login pages. Social logins provide numerous security benefits, as well as preventing my application from being spammed with a large number of random users via the registration page.
 
 My experience with mongoose on the backend when creating queries was not pleasant; I had to make many database calls to retrieve the data I needed. I'd like to switch to prisma ORM, which is well-known for its query builder. Furthermore, because my programme is data-driven, it is critical that I grasp the data's structure as I maintain and develop new features. Prisma accomplishes this by enforcing a schema that allows you to construct models and relationships.
 
