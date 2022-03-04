@@ -40,7 +40,7 @@ Architecture - https://structurizr.com/share/71798
 
 2.) navigate to ./server --> npm install and then npm start
 
-3.) navigate to ./client/nefterify --> npm install and then start
+3.) n another navigate to ./client/nefterify --> npm install and then npm start
 
 create a new account, when doing so you can input the creator pass 'jehucal20' to make a brand account otherwise leave empty for regular user
 
