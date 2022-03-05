@@ -40,7 +40,7 @@ Architecture - https://structurizr.com/share/71798
 
 2.) navigate to ./server --> npm install and then npm start
 
-3.) n another navigate to ./client/nefterify --> npm install and then npm start
+3.) in another terminal navigate to ./client/nfterify --> npm install and then npm start navigate to ./client/nefterify --> npm install and then npm start
 
 4.) login as a brand jehucal@gmail.com:a
 
