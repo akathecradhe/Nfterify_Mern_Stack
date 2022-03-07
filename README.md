@@ -1,7 +1,7 @@
 # Nfterify_Mern_Stack
 
 Introduction (MVP)
-
+http://nfterify.herokuapp.com/
 
 **Tell us about what you were aiming to build**? 
 A Mern Stack web application that can be used by a brand to craete digital 'clothing items' where each piece of clothing has a set number of items.
@@ -34,7 +34,9 @@ Architecture - https://structurizr.com/share/71798
 
 
 
-**How to run** -
+**How to run** - http://nfterify.herokuapp.com/
+
+(setting up may be slightly difficult, any issues contact biz.clive@gmail.com)
 
 1.) Git clone Repository and when inside ide, checkout to branch feature_ConnectingBackend 
 
