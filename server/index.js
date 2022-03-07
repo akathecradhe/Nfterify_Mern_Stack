@@ -1,10 +1,12 @@
 import dbConnect from './database/Dbconnection';
 import app from './routes/routes';
 import dotenv from 'dotenv';
+import express from 'express';
+import path from 'path';
 
 dbConnect();
 dotenv.config();
-
+const __dirname = path.resolve();
 const aPORT = process.env.PORT || 3001;
 
 // Step 1:
