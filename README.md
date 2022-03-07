@@ -36,9 +36,13 @@ Architecture - https://structurizr.com/share/71798
 
 **How to run** -
 
-1.) Git clone Repository and checkout to branch feature_ConnectingBackend 
+1.) Git clone Repository and when inside ide, checkout to branch feature_ConnectingBackend 
 
-2.) navigate to ./server --> npm install and then npm start
+2.) In the terminal navigate to ./server --> npm install , npm i mongoose , 
+
+3.) delete bcrypt in ./server/node_modules,
+
+3.) npm i node-pre-gyp ,then npm start in the terminal
 
 3.) in another terminal navigate to ./client/nfterify --> npm install and then npm start navigate to ./client/nefterify --> npm install and then npm start
 
