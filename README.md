@@ -55,7 +55,7 @@ Architecture - https://structurizr.com/share/71798
 
 6.) login as a user appuser@gmail.com:appuser
 
-7.) enter in the mintUID corrosponding to an item and once 'minted' you can refresh and item should appear in wallet.
+7.) enter in the mintUID corrosponding to an item and once 'minted' you can refresh and item should appear in wallet. (this doesnt work using the link only if you run the code yourself)
 
 You can also create a new account but its not recommended for testing purposes, when doing so you can input the creator pass 'jehucal20' to make a brand account otherwise leave empty for regular user
 
